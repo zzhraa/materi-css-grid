@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS Grid | Justify Self</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                width: 80%;
+                height: 500px;
+                margin: auto;
+                display: grid;
+                /* grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+                grid-template-rows: repeat(3, 100px); */
+
+                grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+                grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4];
+            }
+
+            .items {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .my-item {
+                /* justify-self: start;
+                justify-self: end; */
+                justify-self: center;
+                /* justify-self: stretch; */
+
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="items my-item">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+            <!-- <div class="items i7">7</div>
+            <div class="items">8</div>
+            <div class="items">9</div> -->
+        </div>
+        
+    </body>
+</html>
